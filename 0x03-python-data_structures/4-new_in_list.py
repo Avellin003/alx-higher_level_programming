@@ -6,4 +6,4 @@ def new_in_list(my_list, idx, element):
         new = my_list.copy()
         new.pop(idx)
         new.insert(idx, element)
-        return(new)
+        return (new)
