@@ -1,7 +1,12 @@
 #!/usr/bin/python3
+
+"""
+maker of squrare module
+"""
+
 class Square:
     """
-    Square module maker
+    empty public attributes
     """
     def __init__(self, y):
         """
