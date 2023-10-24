@@ -15,6 +15,7 @@ class Square:
     @property
     def size(self):
 
+        """get the current size '@' decoration"""
         return(self.__size)
 
     @size.setter
