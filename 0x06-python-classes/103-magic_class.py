@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-"""magic class creator"""
-
+'''bytecode class practise'''
 
 import math
 
