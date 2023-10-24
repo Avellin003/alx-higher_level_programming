@@ -1,6 +1,21 @@
 #!/usr/bin/python3
+
+"""
+creator of module square
+"""
+
+
 class Square:
+
+    """
+    empty public class attributes
+    """
+
     def __init__(self, size=0):
+        """
+        checks __init__ object checks for
+        type errors
+        """
         if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
