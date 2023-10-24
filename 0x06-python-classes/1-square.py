@@ -4,7 +4,9 @@
 maker of squrare module
 """
 
+
 class Square:
+
     """
     empty public attributes
     """
