@@ -2,6 +2,7 @@
 
 """Square module"""
 
+
 class Square:
 
     def __init__(self, size):
@@ -23,8 +24,8 @@ class Square:
             self.__size = value
 
     def area(self):
-
         return (self.__size ** 2)
+
     def my_print(self):
 
         for i in range(0, self.__size):
