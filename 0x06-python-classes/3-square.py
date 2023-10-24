@@ -19,10 +19,5 @@ class Square:
         else:
             self.__size = size
 
-        def area(self):
-            """
-            object area returns the exponential of 2
-            of the value given size
-            """
-
-            return self.__size ** 2
+    def area(self):
+        return self.__size ** 2
