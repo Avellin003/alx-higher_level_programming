@@ -70,8 +70,9 @@ class Rectangle:
         strin = ""
         w = self.__width
         h = self.__height
+        s = str(self.print_symbol)
         if w != 0 and h != 0:
-            strin += "\n".join(self.print_symbol * w for i in range(h))
+            strin += "\n".join(s * w for i in range(h))
         return strin
 
     def __repr__(self):
