@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-'''
-creation of class named Rectangle
-'''
+'''creation of class named Rectangle'''
+
+
 class Rectangle:
     pass
