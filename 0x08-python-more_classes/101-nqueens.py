@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     def rejector(y, z):
         """evaluate whether rejecting the return or not"""
-        if (already_exists(z)):
+        if (checker(z)):
             return False
         b = 0
         while(b < y):
@@ -49,7 +49,7 @@ if __name__ == "__main__":
     def nqueens(y):
         """recursive backtracking fx"""
         for z in range(num):
-            clear_a(y)
+            clear_me(y)
             if reject(y, z):
                 a[y][1] = z
                 if (y == num - 1):
@@ -58,4 +58,3 @@ if __name__ == "__main__":
                     nqueens(x + 1)
 
     nqueens(0)
-
