@@ -5,6 +5,7 @@
 class Rectangle:
     '''empty class'''
     x_instance = 0
+ 
     def __init__(self, width=0, height=0):
         '''initializing the instances in class'''
         self.width = width
@@ -14,6 +15,7 @@ class Rectangle:
     def __del__(self):
         '''prints string to be deleted'''
         print("Bye rectangle...")
+        Rectangle.x_instance -= 1
 
     @property
     def width(self):
