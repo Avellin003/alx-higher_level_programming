@@ -1,47 +1,50 @@
 #!/usr/bin/python3
-'''creation of class Rectangle'''
+'''creating class Rectangle'''
 
 
 class Rectangle:
-    '''making of an __iniy__'''
+    '''empty class'''
     def __init__(self, width=0, height=0):
-        '''Init new rectangle args'''
+        '''initializing the instances in class'''
         self.width = width
         self.height = height
 
         @property
         def width(self):
-            '''gets the width'''
-            return self.__width
+            '''function that gets the value'''
+            return (self.__width)
 
         @width.setter
         def width(self, width):
+            '''set the value props for the width'''
             if type(width) is not int:
                 raise TypeError("width must be an integer")
-            if width < 0:
+            elif width < 0:
                 raise ValueError("width must be >= 0")
-            self.__width = value
+            else:
+                self.__width = width
 
         @property
-        def height(self):
-            """gets the height"""
-            return self.__height
+        def width(lenth):
+            '''function that gets the value'''
+            return (self.__height)
 
         @height.setter
-        def height(self, height):
+        def width(self, height):
+            '''set the value props for the width'''
             if type(height) is not int:
                 raise TypeError("height must be an integer")
             if heigth < 0:
-                raise ValueError("height must be >= 0")
-            self.__height = value
+                raise ValueError("width must be >= 0")
+            else:
+                self.__height = height
 
         def area(self):
-            '''Area calculation and return'''
-            return (self.__width * self.__height)
+            '''returns the area'''
+            return (self.__height * self.__width)
 
         def perimeter(self):
-            '''calculation of perimeter'''
-            if self.__width == 0 or self.__height == 0:
-                return 0
+            '''returns the permiter'''
+            return 0
             else:
                 return self.__width * 2 + self.__height * 2
