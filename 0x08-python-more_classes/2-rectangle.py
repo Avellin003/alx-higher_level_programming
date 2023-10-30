@@ -9,42 +9,43 @@ class Rectangle:
         self.width = width
         self.height = height
 
-        @property
-        def width(self):
-            '''function that gets the value'''
-            return (self.__width)
+    @property
+    def width(self):
+        '''function that gets the value'''
+        return self.__width
 
-        @width.setter
-        def width(self, width):
-            '''set the value props for the width'''
-            if type(width) is not int:
-                raise TypeError("width must be an integer")
-            elif width < 0:
-                raise ValueError("width must be >= 0")
-            else:
-                self.__width = width
+    @width.setter
+    def width(self, width):
+        '''set the value props for the width'''
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        elif width < 0:
+            raise ValueError("width must be >= 0")
+        else:
+            self.__width = width
 
-        @property
-        def width(lenth):
-            '''function that gets the value'''
-            return (self.__height)
+    @property
+    def height(length):
+        '''function that gets the value'''
+        return self.__height
 
-        @height.setter
-        def width(self, height):
-            '''set the value props for the width'''
-            if type(height) is not int:
-                raise TypeError("height must be an integer")
-            if heigth < 0:
-                raise ValueError("width must be >= 0")
-            else:
-                self.__height = height
+    @height.setter
+    def height(self, height):
+        '''set the value props for the width'''
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+        else:
+            self.__height = height
 
-        def area(self):
-            '''returns the area'''
-            return (self.__height * self.__width)
+    def area(self):
+        '''returns the area'''
+        return self.__height * self.__width
 
-        def perimeter(self):
-            '''returns the permiter'''
+    def perimeter(self):
+        '''returns the permiter'''
+        if self.__width == 0 or self.__height == 0:
             return 0
-            else:
-                return self.__width * 2 + self.__height * 2
+        else:
+            return 2 * (self.__width + self.__height)
