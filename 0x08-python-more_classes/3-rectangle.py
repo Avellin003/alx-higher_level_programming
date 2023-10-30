@@ -41,21 +41,24 @@ class Rectangle:
 
     def area(self):
         '''returns the area'''
-        return self.__height * self.__width
+        w = self.__width
+        h = self.__height
+        return w * h
 
     def perimeter(self):
         '''returns the permiter'''
-        if self.__width == 0 or self.__height == 0:
+        w = self.__width
+        h = self.__height
+
+        if w == 0 or h == 0:
             return 0
         else:
-            return 2 * (self.__width + self.__height)
-
+            return 2 * (w + h)
     def __str__(self):
-        '''returns string representation for retangle'''
+        '''returns printable rect'''
         strin = ""
+        w = self.__width
         h = self.__height
-        w = self.__weight
-
-        if self.__width != 0 and self.__height != 0:
+        if w != 0 and h != 0:
             strin += "\n".join("#" * w for i in range(h))
-            return strin
+        return strin
