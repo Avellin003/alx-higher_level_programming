@@ -54,6 +54,7 @@ class Rectangle:
             return 0
         else:
             return 2 * (w + h)
+
     def __str__(self):
         '''returns printable rect'''
         strin = ""
