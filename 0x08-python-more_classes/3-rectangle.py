@@ -49,10 +49,13 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.__width + self.__height)
+
     def __str__(self):
         '''returns string representation for retangle'''
         strin = ""
-        if self.__width != 0 and self.__height != 0
-        strin += "\n".join(("#" * self.__width) 
-                for i in range(self.__height))
-        return strin
+        h = self.__height
+        w = self.__weight
+
+        if self.__width != 0 and self.__height != 0:
+            strin += "\n".join("#" * w for i in range(h))
+            return strin
