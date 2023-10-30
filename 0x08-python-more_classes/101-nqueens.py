@@ -55,6 +55,6 @@ if __name__ == "__main__":
                 if (y == num - 1):
                     print(avellin)
                 else:
-                    nqueens(x + 1)
+                    nqueens(y + 1)
 
     nqueens(0)
