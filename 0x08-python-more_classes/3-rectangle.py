@@ -25,7 +25,7 @@ class Rectangle:
             self.__width = width
 
     @property
-    def height(length):
+    def height(self):
         '''function that gets the value'''
         return self.__height
 
