@@ -28,18 +28,18 @@ class Rectangle(BaseGeometry):
         """string method"""
         return ("[Rectangle] {:d}/{:d}".format(self.__width, self.__heigh))
 
-    class Square(Rectangle):
-        """class squre"""
-        def __init__(self, size):
-            """init"""
-            self.integer_validator("size", size)
-            self.__size = size
-            super().__init__(size, size)
+class Square(Rectangle):
+    """class squre"""
+    def __init__(self, size):
+        """init"""
+        self.integer_validator("size", size)
+        self.__size = size
+        super().__init__(size, size)
 
-        def area(self):
-            """area"""
-            return self.__size ** 2
+    def area(self):
+        """area"""
+        return self.__size ** 2
 
-        def __str__(self):
-            """stringer"""
-            return ("[Square] {:d}/{:d}".format(self.__size, self.__size))
+    def __str__(self):
+        """stringer"""
+        return ("[Square] {:d}/{:d}".format(self.__size, self.__size))
