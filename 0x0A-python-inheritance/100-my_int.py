@@ -4,6 +4,7 @@
 
 class MyInt(int):
     """class that inherits from int"""
+
     def __eq__(self, new):
         """inverts != to =="""
         return(int(self) != new)
