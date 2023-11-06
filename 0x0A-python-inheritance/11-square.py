@@ -19,9 +19,11 @@ class Rectangle(BaseGeometry):
         """string represantaion"""
         ans = f"[{self.__class__.__name__}] {self.__width}/{self.__height}"
         return me
+ 
     def area(self):
         """area method"""
         return self.__width * self.__height
+
     def __str__(self):
         """string method"""
         return ("[Rectangle] {:d}/{:d}".format(self.__width, self.__heigh))
@@ -37,6 +39,7 @@ class Rectangle(BaseGeometry):
         def area(self):
             """area"""
             return self.__size ** 2
+
         def __str__(self):
             """stringer"""
             return ("[Square] {:d}/{:d}".format(self.__size, self.__size))
