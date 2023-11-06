@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-'''
-write a function that returns true subclass else false
-'''
+
+'''write a function that returns true subclass else false'''
 
 
 def inherits_from(obj, a_class):
