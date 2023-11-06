@@ -4,6 +4,7 @@ write class BaseGeometry with method area
 that raises an exception
 """
 
+
 class BaseGeometry:
     """a class with a public instance area"""
     def area(self):
