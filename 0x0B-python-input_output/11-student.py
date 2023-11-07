@@ -26,6 +26,6 @@ class Student:
         """reloading"""
         for a in json:
             try:
-                setattr(self, a, jason[a])
+                setattr(self, a, json[a])
             except FileNotFoundError:
                 pass
