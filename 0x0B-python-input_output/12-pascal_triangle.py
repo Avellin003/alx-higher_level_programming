@@ -12,7 +12,7 @@ def pascal_triangle(n):
         t = tr[-1]
         tempo = [1]
         for a in range(len(t) - 1):
-            tempo.append(t[i] + t[i + 1])
+            tempo.append(t[a] + t[a + 1])
         tempo.append(1)
-        tri.append(tempo)
-    return tri
+        tr.append(tempo)
+    return tr
