@@ -13,3 +13,5 @@ except FileNotfoundError:
 
 for i in ar[1:]:
     json_list.append(ar)
+
+save_to_json_file(json_list, filename)
