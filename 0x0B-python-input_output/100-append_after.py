@@ -12,6 +12,6 @@ def append_after(filename="", search_string="", new_string=""):
                 break
             listl.append(l)
             if search_string in l:
-                li.append(new_string)
+                listlappend(new_string)
     with open(filename, "w", encoding="utf-8") as b:
         b.writelines(listl)
