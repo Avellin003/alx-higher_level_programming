@@ -1,0 +1,40 @@
+0-add_integer.txt
+================
+This is a function that adds and returns an int sum
+
+case1: how it must normally work
+--------------------------------
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(2, 3)
+	5
+case2: with floating points
+---------------------------
+	>>> add_integer(1.0, 3.7)
+	4
+case3: for integers and floating points
+---------------------------------------
+	>>> add_integer(1.4, 3)
+	4
+case4: only one number
+----------------------
+the second number is set by default to 98
+	>>> add_integer(1)
+	99
+case5: non_numbers
+-----------------
+
+case5.1: for the first variable
+-----------------------------
+	>>> add_integer("hello", 8)
+	Traceback(most recent call last):
+	TypeError: a must be an integer
+case5.2: for the second variable
+--------------------------------
+	>>> add_integer(2, "hello")
+	Traceback(most recent call last):
+	TypeError: b must be an integer
+case5.3: for both
+-----------------
+	>>>add_integer("hello", "World")
+	Traceback(most recent call last):
+	TypeError: a must be an integer

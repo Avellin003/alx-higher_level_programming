@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+
+
+def matrix_divided(matrix, div):
+    if type(matrix[0]) is not list:
+        raise TypeError
+    else:
+        row = len(matrix[0])
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
+    elif not isinstance(div, (float, int)):
+        raise TypeError("div must be a number")
+    new_l = list()
+    for i in range(len(matrix)):
+        if len(matrix[i]) > row or len(matrix[i]) < row:
+            raise TypeError("Each row of matrix must have the same size")
+        elif type(matrix[i]) != list:
+            raise TypeError()
+        nl = list()
+        for j in range(len(matrix[i])):
+            value = matrix[i][j]
+            if not isinstance(value, (float, int)):
+                raise TypeError("matrix must be a matrix" +
+                        "(array of arrays of integers/floats)")
+                try:
+                    q = round(value / div, 2)
+                except Exception:
+                    raise TypeError
+                nl.append(q)
+            else:
+                new_l.append(nl[:])
+            return new_l
