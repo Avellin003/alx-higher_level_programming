@@ -47,15 +47,16 @@ class Square(Rectangle):
                     self.x = n
                 elif m == "y":
                     self.y = n
+
     def to_dictionary(self):
         """method that returns the dictionary represantation of Rect"""
         return {
                 "id": self.id,
-                "size": self.size,
                 "x": self.x,
+                "size": self.size,
                 "y": self.y
                 }
+
     def __str__(self):
         """prints to stdout"""
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
-
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"

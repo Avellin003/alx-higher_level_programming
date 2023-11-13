@@ -5,6 +5,7 @@ Create class Rectangle that inherits from Base:
 """
 
 
+from collections import OrderedDict
 from models.base import Base
 
 
@@ -108,6 +109,7 @@ class Rectangle(Base):
                     self.x = n
                 elif m == "y":
                     self.y = n
+
     def to_dictionary(self):
         """method that returns the dictionary represantation of Rect"""
         return {
@@ -117,7 +119,9 @@ class Rectangle(Base):
                 "x": self.x,
                 "y": self.y
                 }
+
     def __str__(self):
         """prints to stdout"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
-
+        return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - "
+                f"{self.width}/{self.height}"
+                )

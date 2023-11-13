@@ -28,12 +28,12 @@ class Base:
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
-            return json.dumps(list_dictionaries)
+            return json.dumps(list_dictionaries, sort_keys=True)
 
     @classmethod
     def save_to_file(cls, list_objs):
         """Writes the JSON string representation of list_objs to a file"""
-        filename = cls.__name__+ ".json"
+        filename = cls.__name__ + ".json"
         with open(filename, "w") as file:
             if list_objs is None:
                 file.write("[]")
@@ -43,12 +43,12 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Returns the list of dictionaries from the JSON string representation"""
+        """Returns the list of dictionaries from the JSON string"""
         if json_string is None or len(json_string) == 0:
             return []
         else:
             return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes set"""
@@ -57,7 +57,9 @@ class Base:
         elif cls.__name__ == "Square":
             dummy_instance = cls(1)
         else:
-            raise NotImplementedError(f"create method not implemented forclass {cls.__name__}")
+            raise NotImplementedError(
+                    f"create method not implemented forclass {cls.__name__}"
+                    )
         dummy_instance.update(**dictionary)
         return dummy_instance
 
