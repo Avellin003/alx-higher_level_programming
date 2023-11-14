@@ -1,4 +1,6 @@
-#!/usr/bin/python3
+#!usr/bin/python3
+
+"""function say_my_name that prints out the names with 'My name is'"""
 
 
 def say_my_name(first_name, last_name=""):
