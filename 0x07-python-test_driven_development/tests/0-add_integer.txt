@@ -1,40 +1,97 @@
-0-add_integer.txt
-================
-This is a function that adds and returns an int sum
+Test_Cases 0-add_integer.py
+===========================
+step1: importing
+---------------
+	>>> f = __import__('0-add_integer').add_integer
 
-case1: how it must normally work
---------------------------------
-	>>> add_integer = __import__('0-add_integer').add_integer
-	>>> add_integer(2, 3)
-	5
-case2: with floating points
+testcase1: normal additions
 ---------------------------
-	>>> add_integer(1.0, 3.7)
+
+1.0-positive_integers
+---------------------
+
+	>>> f(1, 3)
 	4
-case3: for integers and floating points
----------------------------------------
-	>>> add_integer(1.4, 3)
-	4
-case4: only one number
-----------------------
-the second number is set by default to 98
-	>>> add_integer(1)
-	99
-case5: non_numbers
+
+1.1-mixed_integers
 -----------------
 
-case5.1: for the first variable
------------------------------
-	>>> add_integer("hello", 8)
-	Traceback(most recent call last):
+	>>> f(1, -3)
+	-2
+
+1.2-floating_positive_integers
+------------------------------
+
+	>>> f(1.3, 3.4)
+	4
+
+1.3-mixed-floating_numbers
+--------------------------
+
+	>>> f(1.3, -3.4)
+	-2
+
+1.4-mixed-floating_integers
+--------------------------
+
+	>>> f(1, -3.4)
+	-2
+
+1.5-with_ungiven_b
+------------------
+
+	>>> f(2)
+	100
+
+TestCase2: Non-numbers
+----------------------
+
+2.0-mixed-str_integers
+----------------------
+
+	>>> f("avellin", 3)
+	Traceback (most recent call last):
 	TypeError: a must be an integer
-case5.2: for the second variable
---------------------------------
-	>>> add_integer(2, "hello")
-	Traceback(most recent call last):
+
+2.1-with_a_as-None
+------------------
+
+	>>> f(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+2.2-with_b_as_None
+------------------
+
+	>>> f(1, None)
+	Traceback (most recent call last):
 	TypeError: b must be an integer
-case5.3: for both
------------------
-	>>>add_integer("hello", "World")
-	Traceback(most recent call last):
+
+2.3-with_both-as_strings
+------------------------
+
+	>>> f ("avellin", "bonaparte")
+	Traceback (most recent call last):
 	TypeError: a must be an integer
+
+2.4-with_inf
+------------
+
+	>>> f(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+
+	>>> f(2, float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+2.5-with_Nan
+------------
+	>>> f(float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+	>>> f(2, float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
