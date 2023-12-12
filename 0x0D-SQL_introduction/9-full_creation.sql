@@ -1,5 +1,5 @@
---creates a second table if 1
---not exist
+-- creates a second table if 1
+-- not exist
 -- and update the second table
 CREATE TABLE IF NOT EXISTS second_table(
 id INT,
