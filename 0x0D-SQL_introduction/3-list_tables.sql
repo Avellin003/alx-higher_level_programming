@@ -1,2 +1,2 @@
---lists all tables in "name" database
+-- lists all tables in name database
 SHOW TABLES
