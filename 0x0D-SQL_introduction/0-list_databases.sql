@@ -1,3 +1,2 @@
---Writing a script that displays
---all the databases
+-- List all databases on the msql server
 SHOW DATABASES;
