@@ -1,18 +1,16 @@
 -- linked to show Dexter
 SELECT DISTINCT `name`
- FROM `tv_genres` AS a
-	INNER JOIN `tv_show_genres` AS b
-	ON a.`id` = b.`genre_id`
-	INNER JOIN `tv_shows` AS c
-	ON b.`show_id` = c.`id`
-	WHERE a.`name` NOT IN
-	(
-		SELECT `name`
-		FROM `tv_genres` AS b
-			INNER JOIN `tv_show_genres` AS b
-			ON a.`id` = b.`genre_id`
-			INNER JOIN `tv_shows` AS c
-			ON b.`show_id` = c.`id`
-			WHERE c.`title` = "Dexter"
-	)
-ORDER BY a.`name`;
+ FROM `tv_genres` AS g
+	INNER JOIN `tv_show_genres` AS s
+	ON g.`id` = s.`genre_id`
+	INNER JOIN `tv_shows` AS t
+	ON s.`show_id` = t.`id`
+	WHERE g.`name` NOT IN
+		(SELECT `name`
+			FROM `tv_genres` AS g
+				INNER JOIN `tv_show_genres` AS s
+				ON g.`id` = s.`genre_id`
+				INNER JOIN `tv_shows` AS t
+				ON s.`show_id` = t.`id`
+				WHERE t.`title` = "Dexter")
+ORDER BY g.`name`;
