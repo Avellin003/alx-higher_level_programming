@@ -10,4 +10,3 @@ for (const userId in dict) {
   occurrencesDict[occurrences].push(userId);
 }
 console.log(occurrencesDict);
-
