@@ -8,7 +8,7 @@ const destinationFilePath = process.argv[4];
 
 // Check if all arguments are provided
 if (!sourceFilePath1 || !sourceFilePath2 || !destinationFilePath) {
-  console.error('Usage: node concatFiles.js sourceFile1 sourceFile2 destinationFile');
+  console.log('error');
   process.exit(1); // Exit with an error code
 }
 
@@ -23,5 +23,3 @@ const concatenatedContent = content1 + content2;
 
 // Write the concatenated content to the destination file
 fs.writeFileSync(destinationFilePath, concatenatedContent);
-
-console.log(`Files concatenated successfully. Result saved to: ${destinationFilePath}`);
