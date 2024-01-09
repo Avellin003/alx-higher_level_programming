@@ -4,4 +4,4 @@ if (isNaN(parseInt(i))) {
   console.log('Not a number');
 }
 else {
-  console.log(i);}
+  console.log('My number: 'i);}
