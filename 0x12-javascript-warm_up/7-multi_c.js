@@ -1,9 +1,9 @@
 #!/usr/bin/node
-let i = 0;
 const num = process.argv[2];
-if (typeof num !== 'number') {
+if (isNaN(num)) {
   console.log('Missing number of occurence');
-} while (i < num) {
+} else {
+  for (let i = 0; i < num; i++) {
   console.log('C is fun');
-  i++;
+  }
 }
