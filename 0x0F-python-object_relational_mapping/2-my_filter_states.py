@@ -13,7 +13,8 @@ if __name__ == "__main__":
             )
 
     cr = db.cursor()
-    cr.execute(f"SELECT * FROM states WHERE name LIKE BINARY '{sys.argv[4]}'")
+    cr.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
+            .format(sys.argv[4]))
     tables = cr.fetchall()
     for i in tables:
         print(i)
