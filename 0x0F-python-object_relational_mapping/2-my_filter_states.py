@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """create MySQLdb"""
-import MySQLdb
-import sys
-
 
 if __name__ == "__main__":
+    import MySQLdb
+    import sys
+
     db = MySQLdb.connect(
             host="localhost",
             user=sys.argv[1],
@@ -14,8 +14,8 @@ if __name__ == "__main__":
     cr = db.cursor()
     cr.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
             .format(sys.argv[4]))
-    rows = cr.fetchall()
-    for row in rows:
-        print(row)
+    rs = cr.fetchall()
+    for r in rs:
+        print(r)
     cr.close()
     db.close()
