@@ -14,7 +14,7 @@ if __name__ == "__name__":
             db=f'{sys.argv[3]}',
             charset='utf8'
             )
-    sql = db.cursor()
+    sql = connect.cursor()
     sql.execute('SELECT * FROM states ORDER BY id ASC')
     table = sql.fetchall()
     for i in table:
