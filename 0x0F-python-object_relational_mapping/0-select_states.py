@@ -6,7 +6,7 @@ if __name__ == "__name__":
     import MySQLdb
     import sys
 
-    connect = MySQL.connect(
+    connect = MySQLdb.connect(
             host='localhost',
             port=3306,
             user=f'{sys.argv[1]}',
