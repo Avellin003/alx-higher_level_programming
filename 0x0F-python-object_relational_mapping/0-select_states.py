@@ -1,23 +1,15 @@
 #!/usr/bin/python3
-"""creation of a script tha lists all states"""
+"""lists all states"""
+import MySQLdb
+import sys
 
-if __name__ == "__name__":
-
-    import MySQLdb
-    import sys
-
-    connect = MySQLdb.connect(
-            host='localhost',
-            port=3306,
-            user=f'{sys.argv[1]}',
-            passwd=sys.argv[2],
-            db=f'{sys.argv[3]}',
-            charset='utf8'
-            )
-    sql = connect.cursor()
-    sql.execute('SELECT * FROM states ORDER BY id ASC')
-    table = sql.fetchall()
-    for i in table:
+if __name__ == "__main__":
+    db = MySQL.connect(host="localhost", user=sys.argv[1],
+            passwd=sys.argv[2], db=sys.argv[3], port=3306)
+    cr = db.cursor()
+    cr.execute('SELECT * FROM states')
+    tables = cr.fetchall()
+    for i in tables:
         print(i)
-    sql.close()
-    connect.close()
+    cr.close()
+    db.close()
