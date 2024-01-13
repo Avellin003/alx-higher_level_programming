@@ -13,9 +13,8 @@ if __name__ == "__main__":
             db=sys.argv[3]
             )
     cr = db.cursor()
-    cr.execute(f'SELECT * FROM states\
-            WHERE name = "{sys.argv[4]}"\
-            ORDER BY id ASC')
+    cr.execute("SELECT * FROM states WHERE name LIKE '{}'"
+            .format(sys.argv[4]))
     tables = cr.fetchall()
     for i in tables:
         print(i)
