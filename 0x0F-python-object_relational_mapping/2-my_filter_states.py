@@ -13,9 +13,9 @@ if __name__ == "__main__":
             db=sys.argv[3]
             )
     cr = db.cursor()
-    cr.execute("SELECT * FROM states\
-            WHERE name = '{}'\
-            ORDER BY id ASC".format(sys.argv[4]))
+    cr.execute(f'SELECT * FROM states\
+            WHERE name = "{sys.argv[4]}"\
+            ORDER BY id ASC')
     tables = cr.fetchall()
     for i in tables:
         print(i)
