@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """create MySQLdb"""
-if __name__ == "__main__":
-    import MySQLdb
-    import sys
+import MySQLdb
+import sys
 
+
+if __name__ == "__main__":
     db = MySQLdb.connect(
             host="localhost",
             user=sys.argv[1],
@@ -15,8 +16,8 @@ if __name__ == "__main__":
     cr = db.cursor()
     cr.execute("SELECT * FROM states WHERE name LIKE '{}'"
             .format(sys.argv[4]))
-    tables = cr.fetchall()
-    for i in tables:
-        print(i)
+    rows = cr.fetchall()
+    for row in rows:
+        print(row)
     cr.close()
     db.close()
