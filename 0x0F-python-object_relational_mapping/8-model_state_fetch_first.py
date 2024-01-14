@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """ prints the first state obj"""
 import sys
 from model_state import Base, State
@@ -11,8 +12,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    instance = session.query(State).first()
-    if instance is None:
-        print("Nothing")
+    resul = session.query(State).first()
+    if resul is not None:
+        print(str(resul.id) + ":", resul.name)
     else:
-        print(instance.id, instance.name, sep=": ")
+        print("Nothing")
