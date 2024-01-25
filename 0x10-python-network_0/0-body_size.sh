@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 #a bash script that takes URL and sends request to the URL
-#and displays the size of the body
-curl -s -w "%{size_download}\n" -o /dev/null ${1} 
+curl -s -w "%{size_download}\n" -o /dev/null ${1}
