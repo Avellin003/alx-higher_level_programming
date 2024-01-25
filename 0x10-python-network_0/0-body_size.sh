@@ -1,3 +1,3 @@
-#!/usr/bin/bash
-#a bash script that takes URL and sends request to the URL
-curl -s -w "%{size_download}\n" -o /dev/null ${1}
+#!/bin/bash
+#script that takes URL and sends request to the URL
+curl -s "$1" | wc -c
