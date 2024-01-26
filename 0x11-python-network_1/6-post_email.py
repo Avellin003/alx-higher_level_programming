@@ -2,11 +2,11 @@
 """Displays the header"""
 
 import sys
-import urllib.request
+import requests
 
 if __name__ == "__main__":
     url = sys.argv[1]
+    val = {"email": sys.argv[2]}
 
-    req = urllib.request.Request(url)
-    with urllib.request.urlopen(req) as ans:
-        print(dict(an s.headers).get("X-Request-Id"))
+    req = requests.post(url, data=val)
+    print(req.text)
