@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""SENDS A REQUEST TO A GIVEN URL"""
-
-import sys
-import urllib.error
-import urllib.request
+"""scipt that intakes the url"""
 
 
 if __name__ == "__main__":
+    import sys
+    from urllib import request, error
 
     try:
-        with urllib.request.urlopen(sys.argv[1]) as ans:
-            print(ans.read().decod('UTF-8'))
-    except urllib.error.HTTPError as i:
-        print("Error code: ", i.code)
+        with request.urlopen(sys.argv[1]) as ans:
+            print(ans.read().decode('UTF-8'))
+    except error.HTTPError as e:
+        print('Error code:', e.code)
