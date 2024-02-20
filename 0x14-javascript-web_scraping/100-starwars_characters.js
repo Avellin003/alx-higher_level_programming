@@ -17,5 +17,5 @@ for (cont i of dd) {
 		const data1 = JSON.parse(body1);
 		console.log(data1.name);
 	});
-}
+    }
 });
